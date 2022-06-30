@@ -1,0 +1,165 @@
+* {
+	min-height: 0;
+	font-family: "Iosevka Nerd Font Mono";
+	font-size: 13pt;
+	border: none;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* .horizontal { */
+/* 	padding: 2px 2px 0px 2px; */
+/* } */
+
+window#waybar {
+	color: #c0caf5;
+	/* background-color: transparent; */
+	/* border-bottom: none; */
+	background-color: #24283b;
+	border-bottom: 1px solid #414868;
+	transition-duration: 0.5s;
+	transition-property: background-color;
+}
+
+#workspaces button {
+	background: #24283b;
+	color: #c0caf5;
+	border-bottom: 1px solid #414868;
+}
+
+#workspaces button.focused {
+	/* color: #24283b;
+	 background: #c0caf5; */
+	color: #c0caf5;
+	background: #414868;
+}
+
+#workspaces button.urgent {
+	color: #f7768e;
+}
+
+#workspaces button.persistent {
+	color: #414868;
+}
+
+#workspaces button:hover {
+	color: #c0caf5;
+	background: #414868;
+	box-shadow: inherit;
+}
+
+#clock,
+#mpd,
+#disk,
+#backlight,
+#bluetooth,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#battery,
+#tray,
+#mode {
+	margin: 0px 2px;   /* gaps between modules */
+	padding: 0.2rem 0.6rem;
+	border-radius: 0;
+	color: #c0caf5;
+	background: #24283b;
+	border-bottom: 1px solid #414868;
+}
+
+#mode,
+#tray {
+	margin: 0 0 0 4px;   /* gaps between modules */
+}
+
+#mode {
+	color: #24283b;
+	background-color: #f7768e;
+}
+
+/* #tray { */
+/* 	background-color: #414868; */
+/* } */
+
+/* 
+#disk {
+	color: #e0af68;
+	background-color: #24283b;
+}
+#cpu {
+	color: #f7768e;
+	background-color: #24283b;
+}
+#memory {
+	color: #7aa2f7;
+	background-color: #24283b;
+}
+#battery {
+	color: #9ece6a;
+	background-color: #24283b;
+	margin: 0 0 0 2px;
+}
+ */
+
+@keyframes blink {
+	to {
+		/* color: #24283b;
+		background-color: #c0caf5; */
+		color: #c0caf5;
+		background-color: #24283b;
+	}
+}
+
+#battery.critical:not(.charging) {
+	/* color: #24283b;
+	background-color: #f7768e; */
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+
+	color: #f7768e;
+	background-color: #24283b;
+}
+
+#battery.charging {
+	/* color: #24283b;
+	background-color: #9ece6a; */
+
+	color: #9ece6a;
+	background-color: #24283b;
+}
+
+/* #mpd.playing {
+	color: #24283b;
+	background-color: #7aa2f7;
+} */
+
+#mpd.paused {
+	/* color: #24283b;
+	background-color: #e0af68; */
+	color: #414868;
+	background-color: #24283b;
+}
+
+#mpd.stopped {
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+#custom-separator {
+	color: #414868;
+	background: #24283b;
+	border-bottom: 1px solid #414868;
+}
+#temperature {
+  margin-right:120px;
+}
+#idle_inhibitor {
+  margin-left:8px;
+  margin-right:8px;
+}

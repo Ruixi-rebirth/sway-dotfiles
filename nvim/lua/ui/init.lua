@@ -1,0 +1,2 @@
+require("ui.colorscheme")
+

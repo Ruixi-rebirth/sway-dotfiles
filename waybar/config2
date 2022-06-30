@@ -1,0 +1,161 @@
+{
+    "modules-left": [
+		"custom/launcher",
+		"sway/workspaces",
+    "idle_inhibitor",
+    "mpd",
+    "custom/cava-internal",
+    ],
+    "modules-center": [
+      "temperature",
+    	"clock"
+    ],
+    "modules-right": [
+      "pulseaudio",
+      "backlight",
+      "memory",
+      "cpu",
+      "network",
+      "battery",
+      "custom/off",
+      "tray"
+    ],
+    "custom/launcher": {
+		"format": " ",
+		"on-click": "~/.config/rofi/launcher.sh",
+		"tooltip": false
+    },
+    "custom/cava-internal": {
+     "exec": "~/.config/waybar/cava-internal.sh",
+    },
+   // "sway/mode": {
+   //     "format": "蘒 {}",
+   //     "tooltip": false
+   // },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        //"format": "{icon}",
+        //"persistent_workspaces": {
+		//	"1": [],
+        //	"2": [],
+        //	"3": [],
+        //	"4": []
+		//},
+        //"format-icons": {
+        //   "urgent": " 𥉉"
+        //}
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        },
+        "tooltip": false
+    },
+    "backlight": {
+            "format": " {percent}%",
+            "on-scroll-up": "light -A 5",
+            "on-scroll-down": "light -U 5",
+            "smooth-scrolling-threshold": 5,
+    },
+    "pulseaudio": {
+            "scroll-step": 1,
+            "format": "{icon} {volume}%", 
+            "format-muted": "婢 Muted",
+            "format-icons": {
+                "default": ["", "", ""]
+            },
+            "states": {
+            	"warning": 85,
+            },
+            "scroll-step": 1,
+            "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+            "tooltip": false,
+    },
+    "battery": {
+            "interval": 10,
+            "states": {
+                	"warning": 20,
+                	"critical": 10
+	            },
+	            "format": "{icon} {capacity}%",
+	            "format-icons": ["", "", "", "", "", "", "", "", ""],
+	            "format-full": "{icon} {capacity}%",
+	            "format-charging": " {capacity}%",
+            "tooltip": false
+    },
+    "clock": {
+    "on-click": "~/.config/waybar/switch_style1.sh &",
+    "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
+		"interval": 1,
+		"format": "🕗{:%I:%M %p  %A %b %d}",
+		"tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
+    },
+    "memory": {
+        "interval": 1,
+        "format": "﬙ {percentage}%",
+        "states": {
+        	"warning": 85,
+        },
+    },
+    "cpu": {
+        "interval": 1,
+        "format": " {usage}%"
+    },
+   	"mpd": {
+		"max-length": 25,
+		"format": "<span foreground='#bb9af7'></span> {title}",
+		"format-paused": "<span style='italic'>{title}</span>",
+		"format-stopped":"😀 ",
+		"format-disconnected": "",
+		//"on-click-middle": "mpc --quiet toggle",
+		//"on-click-middle": "mpc --quiet stop",
+		"on-click": "mpc --quiet toggle",
+		"on-click-right": "mpc ls | mpc add",
+		"on-scroll-up": "mpc --quiet prev",
+		"on-scroll-down": "mpc --quiet next",
+    "smooth-scrolling-threshold":5,
+		"tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
+	},
+   // "cpu#2": {
+   // 	"interval": 1,
+   // 	"format": " {load}",
+   // 	"tooltip": false
+   // },
+    "network": {
+    	"interval": 1,
+        "format-wifi": "說 {essid}",
+        "format-ethernet": "  {ifname} ({ipaddr})",
+        "format-linked": "說 {essid} (No IP)",
+        "format-disconnected": "說 Disconnected",
+        // "format-alt": "說 {ifname} ({ipaddr})",
+        "tooltip": false
+    },
+   "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+       "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon7/temp2_input",
+    // "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C ",
+    "tooltip": false,
+    "format": " {temperatureC}°C"
+},
+//     "temperature": {
+//		"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+//		"critical-threshold": 85,
+//		"interval": 1,
+//		"format": " {temperatureC}°C",
+//		"tooltip": false,
+// },
+    "custom/off": {
+        "format": "",
+        "on-click": "xdg-open 'https://www.agemys.cc/'",
+        "tooltip": false
+    },
+    "tray": {
+		"icon-size": 15,
+		"spacing": 5
+	}
+
+}

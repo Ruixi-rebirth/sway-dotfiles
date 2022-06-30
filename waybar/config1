@@ -1,0 +1,195 @@
+{
+	"layer": "bottom",
+	"position": "top",
+	"height": 28,
+	// "width": 1920, // Comment for dynamic width
+
+	"modules-left": [
+		"sway/workspaces",
+		"custom/separator",
+	//"sway/window",
+    "idle_inhibitor",
+		"mpd",
+    "custom/cava-internal",
+	],
+
+	"modules-center": [
+    "temperature",
+		"clock"
+	],
+
+	"modules-right": [
+    "network",
+		"custom/separator",
+    "pulseaudio",
+		"custom/separator",
+    "backlight",
+		"custom/separator",
+		"cpu",
+		"custom/separator",
+		"memory",
+		"custom/separator",
+		"battery",
+		//"sway/mode",
+		"tray"
+	],
+
+    "custom/launcher": {
+		"format": " ",
+		"on-click": "~/.config/rofi/launcher.sh",
+		"tooltip": false
+    },
+	"custom/separator": {
+		"format": "|",
+		"interval": "once",
+		"tooltip": false
+	},
+
+	"sway/workspaces": {
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+		  "5": [],
+		  "6": [],
+		//"7": [],
+		//"8": [],
+		//"9": []
+		}
+	},
+
+	"sway/window": {
+		"format": " {}",
+		"max-length": 40
+	},
+
+	// "idle_inhibitor": {
+	// 	"format": "{icon}",
+	// 	"format-icons": {
+	// 		"activated": "",
+	// 		"deactivated": ""
+	// 	}
+	// },
+
+	"clock": {
+    "on-click": "~/.config/waybar/switch_style2.sh &",
+    "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
+		"format": "<span foreground='#7dcfff'></span> {:%d %B %Y - %I:%M %p}",
+		"interval": 60,
+		"tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
+	},
+
+   	"mpd": {
+		"max-length": 25,
+		"format": "<span foreground='#bb9af7'></span> {title}",
+		"format-paused": "<span style='italic'>{title}</span>",
+		"format-stopped":"😀 ",
+		"format-disconnected": "",
+		//"on-click-middle": "mpc --quiet toggle",
+		//"on-click-middle": "mpc --quiet stop",
+		"on-click": "mpc --quiet toggle",
+		"on-click-right": "mpc ls | mpc add",
+		"on-scroll-up": "mpc --quiet prev",
+		"on-scroll-down": "mpc --quiet next",
+    "smooth-scrolling-threshold":5,
+		"tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
+	},
+
+	"disk": {
+		"interval": 18000,
+		"format": "<span foreground='#9ece6a'>﫭</span> {percentage_used}%",
+		"tooltip-format": "{used} used out of {total} on {path}"
+	},
+
+	"cpu": {
+		"interval": 300,
+		"format": "<span foreground='#e0af68'>﬙</span> {usage}%"
+	},
+
+	"memory": {
+		"interval": 300,
+		"format": "<span foreground='#7aa2f7'></span> {percentage}%",
+		"tooltip-format": "{used:0.2f}GiB used out of {total:0.2f}GiB"
+	},
+
+	"battery": {
+		"interval": 600,
+		"design-capacity": false,
+		"states": {
+			"warning": 15,
+			"critical":10 
+		},
+		"format": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
+		"format-charging": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
+		"format-time": "{H}h {M}m",
+		"format-icons": ["", "", "", "", "", ""]
+	},
+
+	"tray": {
+		"icon-size": 15,
+		"spacing": 5
+	},
+  "network": {
+    "interface": "wlp0s20f3",
+    "format": " {ifname}",
+    "format-wifi": "{essid} ({signalStrength}%)",
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip": false,
+   //"tooltip-format": "{ifname} via {gwaddr}",
+   //"tooltip-format-wifi": "{essid} ({signalStrength}%)",
+   //"tooltip-format-ethernet": "{ifname}",
+   //"tooltip-format-disconnected": "Disconnected",
+    "max-length": 30
+},
+"backlight": {
+    "device": "intel_backlight",
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", ""]
+},
+"pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "婢 Muted",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["","墳"]
+    },
+    "tooltip": false,
+    "scroll-step": 1,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "custom/cava-internal": {
+     //"exec": "$HOME/.config/waybar/cava-internal.py -f 24 -b 24 -e B48EAD,81A1C1,A3BE8C,EBCB8B -c average",
+     "exec": "~/.config/waybar/cava-internal.sh",
+    },
+     "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon7/temp2_input",
+    // "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C ",
+    "format": " {temperatureC}°C"
+   },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+	// "wlr/taskbar": {
+	// 	"format": "{title}",
+	// 	"tooltip-format": "{title}",
+	// 	"on-click": "minimize-raise",
+	// 	"on-click-middle": "close"
+	// }
+}
