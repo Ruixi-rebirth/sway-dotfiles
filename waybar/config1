@@ -9,8 +9,9 @@
 		"custom/separator",
     "temperature",
 		"custom/separator",
-		"mpd",
     "idle_inhibitor",
+		"custom/separator",
+		"mpd",
     "custom/cava-internal",
 	],
 

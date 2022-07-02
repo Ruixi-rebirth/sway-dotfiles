@@ -77,7 +77,7 @@ tooltip label {
     color: rgb(201, 203, 255);
 }
 
-#mode, #clock, #memory, #cpu, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery {
+#mode, #clock, #memory, #temperature,#cpu,#mpd, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery {
 	padding-left: 15px;
 	padding-right: 15px;
 }
