@@ -12,7 +12,7 @@ require("plugins.configs.nvim-tree")
 require("plugins.configs.toggleterm")
 require("plugins.configs.aerial")
 --require("plugins.configs.nvim-lightbulb")
-require("plugins.configs.lspsaga")
+-- require("plugins.configs.lspsaga")
 local fn = vim.fn
 -- automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"

@@ -134,6 +134,16 @@ nvim_lsp.tsserver.setup({})
 
 nvim_lsp.bashls.setup({})
 
+nvim_lsp.zk.setup({
+  	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+    zk = {
+      cmd = "~/.local/share/nvim/lsp_servers/zk/zk"
+    }
+  }
+})
+
 --------
 -- UI --
 --------

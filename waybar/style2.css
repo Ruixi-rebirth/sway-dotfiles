@@ -1,5 +1,5 @@
 * {
-	font-family: JetBrainsMono Nerd Font;
+	font-family: "JetBrainsMono Nerd Font";
 	font-size: 15px;
 	font-weight: bold;
 	border-radius: 0px;
@@ -156,7 +156,10 @@ tooltip label {
   margin-right:12px;
 }
 
-#temperature {
-  margin-right:120px;
-}
+/* #temperature { */
+/*   margin-right:120px; */
+/* } */
 
+#custom-cava-internal{
+	font-family: "Iosevka Nerd Font Mono";
+}

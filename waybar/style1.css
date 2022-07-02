@@ -1,7 +1,7 @@
 * {
 	min-height: 0;
 	font-family: "Iosevka Nerd Font Mono";
-	font-size: 13pt;
+	font-size: 12pt;
 	border: none;
 	border-radius: 0;
 	margin: 0;
@@ -156,10 +156,10 @@ window#waybar {
 	background: #24283b;
 	border-bottom: 1px solid #414868;
 }
-#temperature {
-  margin-right:120px;
-}
 #idle_inhibitor {
   margin-left:8px;
   margin-right:8px;
+}
+#custom-cava-internal{
+	font-family: "Hack Nerd Font" ;
 }

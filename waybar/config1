@@ -7,14 +7,14 @@
 	"modules-left": [
 		"sway/workspaces",
 		"custom/separator",
-	//"sway/window",
-    "idle_inhibitor",
+    "temperature",
+		"custom/separator",
 		"mpd",
+    "idle_inhibitor",
     "custom/cava-internal",
 	],
 
 	"modules-center": [
-    "temperature",
 		"clock"
 	],
 
@@ -64,14 +64,6 @@
 		"max-length": 40
 	},
 
-	// "idle_inhibitor": {
-	// 	"format": "{icon}",
-	// 	"format-icons": {
-	// 		"activated": "",
-	// 		"deactivated": ""
-	// 	}
-	// },
-
 	"clock": {
     "on-click": "~/.config/waybar/switch_style2.sh &",
     "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
@@ -81,7 +73,7 @@
 	},
 
    	"mpd": {
-		"max-length": 25,
+		"max-length": 30,
 		"format": "<span foreground='#bb9af7'></span> {title}",
 		"format-paused": "<span style='italic'>{title}</span>",
 		"format-stopped":"😀 ",
@@ -186,10 +178,4 @@
             "deactivated": ""
         }
     },
-	// "wlr/taskbar": {
-	// 	"format": "{title}",
-	// 	"tooltip-format": "{title}",
-	// 	"on-click": "minimize-raise",
-	// 	"on-click-middle": "close"
-	// }
 }

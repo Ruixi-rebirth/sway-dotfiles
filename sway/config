@@ -42,7 +42,7 @@ focus_follows_mouse no
 exec_always  --no-startup-id  dunst &
 exec_always  --no-startup-id  fcitx5 &
 exec_always  --no-startup-id  nm-applet --indicator &
-exec_always  --no-startup-id  ~/.config/waybar/switch_style1.sh &
+exec_always  --no-startup-id  ~/.config/waybar/switch_style2.sh &
 
 #-------------------------------#
 # Make capslock work as escape #
@@ -58,8 +58,9 @@ input "type:keyboard" {
 #----------------#
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Nordic'
+    gsettings set $gnome-schema gtk-theme 'Catppuccin'
     gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+    gsettings set $gnome-schema cursor-theme 'Catppuccin-Frappe-Dark-Cursors'
     gsettings set $gnome-schema font-name 'jetbrains mono nerd font'
 }
 
@@ -71,7 +72,7 @@ set $mod Mod1
 #----------------------------------------#
 # window colours: border background text #
 #----------------------------------------#
-client.focused          #81a1c1 #81a1c1 #ffffff
+client.focused          #ffc0cb #ffc0cb #ffffff
 client.unfocused        #2e3440 #1f222d #888888
 client.focused_inactive #2e3440 #1f222d #888888 
 client.placeholder      #2e3440 #1f222d #888888
@@ -112,7 +113,7 @@ set $term kitty
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 #exec_always --no-startup-id swaybg -i ~/.config/sway/Background/default.png
-output "*" bg ~/.config/sway/Background/wallpaper5.png fill
+output "*" bg ~/.config/sway/Background/wallpaper10.png fill
 # Automatically change wallpapers at intervals
 #exec_always --no-startup-id ~/.config/sway/dynamic_wallpaper.sh $
 

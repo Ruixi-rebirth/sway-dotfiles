@@ -1,5 +1,6 @@
 #! /bin/bash
 
+
 bar="▁▂▃▄▅▆▇█"
 dict="s/;//g;"
 

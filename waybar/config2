@@ -2,12 +2,12 @@
     "modules-left": [
 		"custom/launcher",
 		"sway/workspaces",
+    "temperature",
     "idle_inhibitor",
     "mpd",
     "custom/cava-internal",
     ],
     "modules-center": [
-      "temperature",
     	"clock"
     ],
     "modules-right": [
@@ -28,10 +28,6 @@
     "custom/cava-internal": {
      "exec": "~/.config/waybar/cava-internal.sh",
     },
-   // "sway/mode": {
-   //     "format": "蘒 {}",
-   //     "tooltip": false
-   // },
     "sway/workspaces": {
         "disable-scroll": true,
         //"format": "{icon}",
@@ -57,7 +53,7 @@
             "format": " {percent}%",
             "on-scroll-up": "light -A 5",
             "on-scroll-down": "light -U 5",
-            "smooth-scrolling-threshold": 5,
+           //"smooth-scrolling-threshold": 5,
     },
     "pulseaudio": {
             "scroll-step": 1,
