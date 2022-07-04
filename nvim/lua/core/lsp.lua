@@ -52,8 +52,14 @@ local on_attach = function(client, bufnr)
 end
 
 -- Add additional capabilities supported by nvim-cmp
+-- nvim hasn't added foldingRange to default capabilities, users must add it manually
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.foldingRange = {
+    dynamicRegistration = false,
+    lineFoldingOnly = true
+}
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local nvim_lsp = require("lspconfig")
 
@@ -124,7 +130,6 @@ nvim_lsp.sumneko_lua.setup({
 --html
 --Enable (broadcasting) snippet capability for completion
 --local capabilities = vim.lsp.protocol.make_client_capabilities()
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 nvim_lsp.html.setup({})
 
