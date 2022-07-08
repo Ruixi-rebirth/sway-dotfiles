@@ -10,11 +10,11 @@ SELECT="#1E1E2E"
 ACCENT="#24273A"
 
 # nord
-ALPHA="#00000000"
-BG="#3B4253"
-FG="#BF616A"
-SELECT="#343a46"
-ACCENT="#3B4252"
+#ALPHA="#00000000"
+#BG="#3B4253"
+#FG="#BF616A"
+#SELECT="#343a46"
+#ACCENT="#3B4252"
 
 # overwrite colors file
 cat > $dir/colors.rasi <<- EOF
