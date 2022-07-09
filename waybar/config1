@@ -83,6 +83,7 @@
 		//"on-click-middle": "mpc --quiet stop",
 		"on-click": "mpc --quiet toggle",
 		"on-click-right": "mpc ls | mpc add",
+    "on-click-middle": "kitty ncmpcpp",
 		"on-scroll-up": "mpc --quiet prev",
 		"on-scroll-down": "mpc --quiet next",
     "smooth-scrolling-threshold":5,
@@ -166,7 +167,7 @@
     },
      "temperature": {
     // "thermal-zone": 2,
-"hwmon-path": "/sys/class/hwmon/hwmon6/temp2_input",
+"hwmon-path": "/sys/class/hwmon/hwmon7/temp2_input",
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
     "format": " {temperatureC}°C"
