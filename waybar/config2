@@ -130,20 +130,12 @@
     },
    "temperature": {
     // "thermal-zone": 2,
-    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-       "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon7/temp2_input",
+"hwmon-path": "/sys/class/hwmon/hwmon6/temp2_input",
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
     "tooltip": false,
     "format": " {temperatureC}°C"
 },
-//     "temperature": {
-//		"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
-//		"critical-threshold": 85,
-//		"interval": 1,
-//		"format": " {temperatureC}°C",
-//		"tooltip": false,
-// },
     "custom/off": {
         "format": "",
         "on-click": "xdg-open 'https://www.agemys.cc/'",
