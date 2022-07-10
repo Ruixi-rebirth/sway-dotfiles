@@ -1,3 +1,5 @@
+output * adaptive_sync on
+
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
@@ -25,7 +27,7 @@ for_window [app_id="Authy"]                            floating enable
 for_window [app_id="mpv"] floating enable 
 for_window [app_id="netease-cloud-music-gtk"] floating enable 
 for_window [app_id="Nautilus"] floating enable 
-
+for_window [app_id="Telegram"] opacity 0.95
 #bar {
 #    position top
 #    swaybar_command waybar 
@@ -39,10 +41,11 @@ focus_follows_mouse no
 #-----------#
 # Autostart #
 #-----------#
-exec_always  --no-startup-id  dunst &
+#exec_always  --no-startup-id  dunst &
+exec_always  --no-startup-id  mako &
 exec_always  --no-startup-id  fcitx5 &
 exec_always  --no-startup-id  nm-applet --indicator &
-exec_always  --no-startup-id  ~/.config/waybar/switch_style2.sh &
+exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
 
 #-------------------------------#
 # Make capslock work as escape #
@@ -113,7 +116,7 @@ set $term kitty
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 #exec_always --no-startup-id swaybg -i ~/.config/sway/Background/default.png
-output "*" bg ~/.config/sway/Background/wallpaper10.png fill
+output "*" bg ~/.config/sway/Background/tropic_island_evening.png fill
 # Automatically change wallpapers at intervals
 #exec_always --no-startup-id ~/.config/sway/dynamic_wallpaper.sh $
 
@@ -167,8 +170,8 @@ bindsym $mod+m exec --no-startup-id   netease-cloud-music-gtk
 bindsym $mod+b exec --no-startup-id   firefox
 bindsym $mod+Shift+x exec --no-startup-id   ~/.config/sway/swaylock.sh
 bindsym $mod+t exec --no-startup-id   telegram-desktop
-bindsym $mod+bracketleft  exec --no-startup-id   grimeshot --notify --cursor copy area
-bindsym $mod+bracketright exec --no-startup-id    grimeshot --notify --cursor save area
+bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  copy area
+bindsym $mod+bracketright exec --no-startup-id    grimshot --notify  save area
 
 
 # Kill focused window
