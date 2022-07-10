@@ -6,7 +6,7 @@ for i in /sys/class/hwmon/hwmon*/temp*_input; do
         export HWMON_PATH="$i"
     fi
 done
-sed -i "/hwmon-path/c\"hwmon-path\": \"$HWMON_PATH\"," ~/.config/waybar/config1 && sed -i "/hwmon-path/c\"hwmon-path\": \"$HWMON_PATH\"," ~/.config/waybar/config2
+sed -i "/hwmon-path/c\"hwmon-path\": \"$HWMON_PATH\"," $SDIR/config1 && sed -i "/hwmon-path/c\"hwmon-path\": \"$HWMON_PATH\"," $SDIR/config2
 
 #waybar -c "$SDIR"/config1 -s "$SDIR"/style1.css &
 waybar -c "$SDIR"/config2 -s "$SDIR"/style2.css &
