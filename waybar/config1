@@ -122,7 +122,7 @@
 
 	"tray": {
 		"icon-size": 15,
-		"spacing": 5
+		"spacing": 5,
 	},
   "network": {
     "interface": "wlp0s20f3",
@@ -164,15 +164,18 @@
     "custom/cava-internal": {
      //"exec": "$HOME/.config/waybar/cava-internal.py -f 24 -b 24 -e B48EAD,81A1C1,A3BE8C,EBCB8B -c average",
      "exec": "~/.config/waybar/cava-internal.sh",
+		 "tooltip": false
     },
      "temperature": {
     // "thermal-zone": 2,
-"hwmon-path": "/sys/class/hwmon/hwmon7/temp2_input",
+"hwmon-path": "/sys/class/hwmon/hwmon6/temp2_input",
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
-    "format": " {temperatureC}°C"
+    "format": " {temperatureC}°C",
+		 "tooltip": false
    },
     "idle_inhibitor": {
+		    "tooltip": false,
         "format": "{icon}",
         "format-icons": {
             "activated": "",
