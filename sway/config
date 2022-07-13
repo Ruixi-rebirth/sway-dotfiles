@@ -166,12 +166,13 @@ input "1739:52781:MSFT0001:01_06CB:CE2D_Touchpad" {
 bindsym $mod+Return exec $term
 
 # quick start some applications
-bindsym $mod+m exec --no-startup-id   netease-cloud-music-gtk
-bindsym $mod+b exec --no-startup-id   firefox
-bindsym $mod+Shift+x exec --no-startup-id   ~/.config/sway/swaylock.sh
-bindsym $mod+t exec --no-startup-id   telegram-desktop
-bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  copy area
-bindsym $mod+bracketright exec --no-startup-id    grimshot --notify  save area
+bindsym $mod+m exec --no-startup-id              netease-cloud-music-gtk
+bindsym $mod+b exec --no-startup-id              firefox
+bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
+bindsym $mod+t exec --no-startup-id              telegram-desktop
+bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
+bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
+bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
 
 
 # Kill focused window

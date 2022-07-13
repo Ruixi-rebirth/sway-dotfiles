@@ -16,7 +16,7 @@ getTargetDirectory() {
   test -f "${XDG_CONFIG_HOME:-~/.config}/user-dirs.dirs" && \
     . "${XDG_CONFIG_HOME:-~/.config}/user-dirs.dirs"
 
-  echo "${XDG_SCREENSHOTS_DIR:-${XDG_PICTURES_DIR:-$HOME}}"
+  echo "${XDG_SCREENSHOTS_DIR:-${XDG_PICTURES_DIR:-$HOME/.cache/}}"
 }
 
 NOTIFY=no
