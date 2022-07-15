@@ -68,6 +68,7 @@
 	"clock": {
     "on-click": "~/.config/waybar/switch_style2.sh &",
     "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
+    "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
 		"format": "<span foreground='#7dcfff'></span> {:%d %B %Y - %I:%M %p}",
 		"interval": 60,
 		"tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"

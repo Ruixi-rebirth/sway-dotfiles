@@ -24,9 +24,18 @@ for_window [app_id="toolbox"]                    floating enable
 for_window [app_id="page-info"]                  floating enable	
 for_window [app_id="webconsole"]                 floating enable
 for_window [app_id="Authy"]                            floating enable
+for_window [app_id="termfloat"] floating enable
+for_window [app_id="termfloat"] resize set height 540
+for_window [app_id="termfloat"] resize set width 960
 for_window [app_id="mpv"] floating enable 
+for_window [app_id="mpv"] resize set height 540
+for_window [app_id="mpv"] resize set width 960
 for_window [app_id="netease-cloud-music-gtk"] floating enable 
+for_window [app_id="netease-cloud-music-gtk"] resize set height 540
+for_window [app_id="netease-cloud-music-gtk"] resize set width 960
 for_window [app_id="Nautilus"] floating enable 
+for_window [app_id="Nautilus"] resize set height 540
+for_window [app_id="Nautilus"] resize set width 960
 for_window [app_id="Telegram"] opacity 0.95
 #bar {
 #    position top
@@ -164,6 +173,7 @@ input "1739:52781:MSFT0001:01_06CB:CE2D_Touchpad" {
 #----------------#
 # Start a terminal
 bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec kitty --class="termfloat"
 
 # quick start some applications
 bindsym $mod+m exec --no-startup-id              netease-cloud-music-gtk
