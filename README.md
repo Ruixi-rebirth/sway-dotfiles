@@ -20,10 +20,6 @@ https://user-images.githubusercontent.com/75824585/179343906-d06d2d99-84a2-4d34-
 
 <hr />
 
-![](./show/show6.png)
-
-<hr>
-
 ![](./show/show8.png)
 
 ## [Star History](#)
