@@ -1,4 +1,4 @@
-### ScreenShot
+## [ScreenShot](#)
 
 https://user-images.githubusercontent.com/75824585/179343385-799c0b21-573e-4fc8-bbca-97aa98a07d59.mp4
 
@@ -26,6 +26,6 @@ https://user-images.githubusercontent.com/75824585/179343906-d06d2d99-84a2-4d34-
 
 ![](./show/show8.png)
 
-<hr>
+## [Star History](#)
 
-![](./show/show.png)
+[![Star History Chart](https://api.star-history.com/svg?repos=Ruixi-rebirth/sway-dotfiles&type=Date)](https://star-history.com/#Ruixi-rebirth/sway-dotfiles&Date)
