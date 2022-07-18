@@ -1,5 +1,8 @@
+#-----------------------------#
+#           Misc              #
+#-----------------------------#
 output * adaptive_sync on
-
+  
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
@@ -10,147 +13,150 @@ gaps outer  0
 smart_borders on
 #smart_gaps on
 
-
-## Always float certain windows
-for_window [app_id="pop-up"]                     floating enable
-for_window [app_id="bubble"]                     floating enable 
-for_window [app_id="task_dialog"]                floating enable
-for_window [app_id="Preferences"]                floating enable
-for_window [app_id="dialog"]                     floating enable 
-for_window [app_id="menu"]                       floating enable
-for_window [app_id="Organizer"]                  floating enable
-for_window [app_id="About"]                      floating enable
-for_window [app_id="toolbox"]                    floating enable
-for_window [app_id="page-info"]                  floating enable	
-for_window [app_id="webconsole"]                 floating enable
-for_window [app_id="Authy"]                            floating enable
-for_window [app_id="termfloat"] floating enable
-for_window [app_id="termfloat"] resize set height 540
-for_window [app_id="termfloat"] resize set width 960
-for_window [app_id="mpv"] floating enable 
-for_window [app_id="mpv"] resize set height 540
-for_window [app_id="mpv"] resize set width 960
-for_window [app_id="netease-cloud-music-gtk"] floating enable 
-for_window [app_id="netease-cloud-music-gtk"] resize set height 540
-for_window [app_id="netease-cloud-music-gtk"] resize set width 960
-for_window [app_id="Nautilus"] floating enable 
-for_window [app_id="Nautilus"] resize set height 540
-for_window [app_id="Nautilus"] resize set width 960
-for_window [app_id="Telegram"] opacity 0.95
-#bar {
-#    position top
-#    swaybar_command waybar 
-#}
+#------------------------------#
+# Always float certain windows #
+#------------------------------#
+    for_window [app_id="pop-up"]                     floating enable
+    for_window [app_id="bubble"]                     floating enable 
+    for_window [app_id="task_dialog"]                floating enable
+    for_window [app_id="Preferences"]                floating enable
+    for_window [app_id="dialog"]                     floating enable 
+    for_window [app_id="menu"]                       floating enable
+    for_window [app_id="Organizer"]                  floating enable
+    for_window [app_id="About"]                      floating enable
+    for_window [app_id="toolbox"]                    floating enable
+    for_window [app_id="page-info"]                  floating enable	
+    for_window [app_id="webconsole"]                 floating enable
+    for_window [app_id="Authy"]                      floating enable
+    for_window [app_id="termfloat"]                  floating enable
+    for_window [app_id="termfloat"]                  resize set height 540
+    for_window [app_id="termfloat"]                  resize set width 960
+    for_window [app_id="mpv"]                        floating enable 
+    for_window [app_id="mpv"]                        resize set height 540
+    for_window [app_id="mpv"]                        resize set width 960
+    for_window [app_id="netease-cloud-music-gtk"]    floating enable 
+    for_window [app_id="netease-cloud-music-gtk"]    position center 
+    for_window [app_id="netease-cloud-music-gtk"]    resize set height 540
+    for_window [app_id="netease-cloud-music-gtk"]    resize set width 960
+    for_window [app_id="Nautilus"]                   floating enable 
+    for_window [app_id="Nautilus"]                   resize set height 540
+    for_window [app_id="Nautilus"]                   resize set width 960
+    for_window [app_id="Telegram"]                   opacity 0.95
 
 #---------------------#
 # Focus follows mouse #
 #---------------------#
-focus_follows_mouse no
+    focus_follows_mouse no
 
 #-----------#
 # Autostart #
 #-----------#
-#exec_always  --no-startup-id  dunst &
-exec_always  --no-startup-id  mako &
-exec_always  --no-startup-id  fcitx5 &
-exec_always  --no-startup-id  nm-applet --indicator &
-exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
+    #exec_always  --no-startup-id  dunst &
+    exec_always  --no-startup-id  mako &
+    exec_always  --no-startup-id  fcitx5 &
+    exec_always  --no-startup-id  nm-applet --indicator &
+    exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
 
 #-------------------------------#
 # Make capslock work as escape #
 #-------------------------------#
-input "type:keyboard" {           
-    xkb_layout us
-    xkb_options caps:escape
-}
+    input "type:keyboard" {           
+        xkb_layout us
+        xkb_options caps:escape
+    }
 
 
 #----------------#
 # set gtk+ theme #
 #----------------#
-set $gnome-schema org.gnome.desktop.interface
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'Catppuccin'
-    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-    gsettings set $gnome-schema cursor-theme 'Catppuccin-Frappe-Dark-Cursors'
-    gsettings set $gnome-schema font-name 'jetbrains mono nerd font'
-}
+    set $gnome-schema org.gnome.desktop.interface
+    exec_always {
+        gsettings set $gnome-schema gtk-theme 'Catppuccin'
+        gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+        gsettings set $gnome-schema cursor-theme 'Catppuccin-Frappe-Dark-Cursors'
+        gsettings set $gnome-schema font-name 'jetbrains mono nerd font'
+    }
 
 #---------#
 # mod key #
 #---------#
-set $mod Mod1
+    set $mod Mod1
 
 #----------------------------------------#
 # window colours: border background text #
 #----------------------------------------#
-client.focused          #ffc0cb #ffc0cb #ffffff
-client.unfocused        #2e3440 #1f222d #888888
-client.focused_inactive #2e3440 #1f222d #888888 
-client.placeholder      #2e3440 #1f222d #888888
-client.urgent           #D08770 #D08770 #ffffff
-client.background       #242424
+    client.focused          #ffc0cb #ffc0cb #ffffff
+    client.unfocused        #2e3440 #1f222d #888888
+    client.focused_inactive #2e3440 #1f222d #888888 
+    client.placeholder      #2e3440 #1f222d #888888
+    client.urgent           #D08770 #D08770 #ffffff
+    client.background       #242424
 
 #-----------------------------------#
 # Home row direction keys, like vim #
 #-----------------------------------#
-set $left  h
-set $down  j
-set $up    k
-set $right l
+    set $left  h
+    set $down  j
+    set $up    k
+    set $right l
 
 #----------------------------------#
 # Your preferred terminal emulator #
 #----------------------------------#
-set $term kitty
+    set $term kitty
 
 #-------------------------------------#
 # Your preferred application launcher #
 #-------------------------------------#
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+    # Note: pass the final command to swaymsg so that the resulting window can be opened
+    # on the original workspace that the command was run on.
+    # set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 #-----------#
 # WallPaper #
 #-----------#
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
-#exec_always --no-startup-id swaybg -i ~/.config/sway/Background/default.png
-output "*" bg ~/.config/sway/Background/tropic_island_evening.png fill
-# Automatically change wallpapers at intervals
-#exec_always --no-startup-id ~/.config/sway/dynamic_wallpaper.sh $
+    ### Output configuration
+    #
+    # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+    #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+    #
+    # Example configuration:
+    #
+    #   output HDMI-A-1 resolution 1920x1080 position 1920,0
+    #
+    # You can get the names of your outputs by running: swaymsg -t get_outputs
+    #exec_always --no-startup-id swaybg -i ~/.config/sway/Background/default.png
+    output "*" bg ~/.config/sway/Background/tropic_island_evening.png fill
+    # Automatically change wallpapers at intervals
+    #exec_always --no-startup-id ~/.config/sway/dynamic_wallpaper.sh $
 
 #-------------------------------------------------#
 # Control volume,monitor brightness,media players #
 #-------------------------------------------------#
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    bindsym XF86MonBrightnessUp exec light -A 5
+    bindsym XF86MonBrightnessDown exec light -U 5
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
 
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+#--------------------#
+# Idle configuration #
+#--------------------#
+    #exec swayidle -w \
+            #timeout 300 '~/.config/sway/swaylock.sh' \
+            #timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+            #timeout 6 'systemctl suspend' \
+            #before-sleep '~/.config/sway/swaylock.sh'
+
+    exec swayidle -w \
+            timeout 800 'systemctl suspend' \
+            before-sleep '~/.config/sway/swaylock.sh'
+
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -158,51 +164,51 @@ bindsym XF86AudioPrev exec playerctl previous
 #---------------------#
 # Input configuration #
 #---------------------#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-input "1739:52781:MSFT0001:01_06CB:CE2D_Touchpad" {
-       dwt enabled
-       tap enabled
-       natural_scroll enabled
-       middle_emulation enabled
-   }
+    # You can get the names of your inputs by running: swaymsg -t get_inputs
+    # Read `man 5 sway-input` for more information about this section.
+    input "1739:52781:MSFT0001:01_06CB:CE2D_Touchpad" {
+           dwt enabled
+           tap enabled
+           natural_scroll enabled
+           middle_emulation enabled
+       }
 
 
 #----------------#
 # Key bindings --#
 #----------------#
-# Start a terminal
-bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec kitty --class="termfloat"
+    # Start a terminal
+    bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec kitty --class="termfloat"
 
-# quick start some applications
-bindsym $mod+m exec --no-startup-id              netease-cloud-music-gtk
-bindsym $mod+b exec --no-startup-id              firefox
-bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
-bindsym $mod+t exec --no-startup-id              telegram-desktop
-bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
-bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
-bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
+    # quick start some applications
+    bindsym $mod+m exec --no-startup-id              netease-cloud-music-gtk
+    bindsym $mod+b exec --no-startup-id              firefox
+    bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
+    bindsym $mod+t exec --no-startup-id              telegram-desktop
+    bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
+    bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
+    bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
 
 
-# Kill focused window
-bindsym $mod+Shift+p kill
+    # Kill focused window
+    bindsym $mod+Shift+p kill
 
-# Start your launcher
-bindsym Super_L exec ~/.config/rofi/launcher.sh
+    # Start your launcher
+    bindsym Super_L exec ~/.config/rofi/launcher.sh
 
-# Reload the configuration file
-bindsym $mod+Shift+c reload
+    # Reload the configuration file
+    bindsym $mod+Shift+c reload
 
-# Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # Exit sway (logs you out of your Wayland session)
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-# Drag floating windows by holding down $mod and left mouse button.
-# Resize them with right mouse button + $mod.
-# Despite the name, also works for non-floating windows.
-# Change normal to inverse to use left mouse button for resizing and right
-# mouse button for dragging.
-floating_modifier $mod normal
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
 
 #----------------#
 # Moving around: #
@@ -322,23 +328,3 @@ bindsym Shift+Ctrl+Left          resize shrink width  5 px or 5 ppt
 bindsym Shift+Ctrl+Up            resize grow   height 5 px or 5 ppt
 bindsym Shift+Ctrl+Down          resize shrink height 5 px or 5 ppt
 bindsym Shift+Ctrl+Right         resize grow   width  5 px or 5 ppt
-
-
-##-------------#
-## Status Bar: #
-##-------------#
-## Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
-#
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-#
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
-
