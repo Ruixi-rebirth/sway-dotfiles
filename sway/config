@@ -153,7 +153,7 @@ smart_borders on
             #before-sleep '~/.config/sway/swaylock.sh'
 
     exec swayidle -w \
-            timeout 800 'systemctl suspend' \
+            timeout 900 'systemctl suspend' \
             before-sleep '~/.config/sway/swaylock.sh'
 
 
