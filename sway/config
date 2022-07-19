@@ -1,3 +1,13 @@
+#---------#
+# mod key #
+#---------#
+    set $mod Mod1
+
+#---------------#
+# waybar toggle #
+#---------------#
+    bindsym $mod+o exec killall -SIGUSR1 waybar
+
 #-----------------------------#
 #           Misc              #
 #-----------------------------#
@@ -16,6 +26,7 @@ smart_borders on
 #------------------------------#
 # Always float certain windows #
 #------------------------------#
+#swaymsg -t get_tree | grep app_id
     for_window [app_id="pop-up"]                     floating enable
     for_window [app_id="bubble"]                     floating enable 
     for_window [app_id="task_dialog"]                floating enable
@@ -77,10 +88,6 @@ smart_borders on
         gsettings set $gnome-schema font-name 'jetbrains mono nerd font'
     }
 
-#---------#
-# mod key #
-#---------#
-    set $mod Mod1
 
 #----------------------------------------#
 # window colours: border background text #
