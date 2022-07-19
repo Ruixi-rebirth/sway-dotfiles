@@ -1,3 +1,4 @@
+
 ## Configuration file for CAVA. Default values are commented out. Use either ';' or '#' for commenting.
 
 
@@ -21,7 +22,7 @@
 
 # The number of bars (0-200). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
-; bars = 0
+bars = 12
 ; bar_width = 2
 ; bar_spacing = 1
 # bar_height is only used for output in "noritake" format
@@ -42,7 +43,7 @@
 
 # Seconds with no input before cava goes to sleep mode. Cava will not perform FFT or drawing and
 # only check for input once per second. Cava will wake up once input is detected. 0 = disable.
-; sleep_timer = 0
+sleep_timer = 10
 
 
 [input]
@@ -91,7 +92,7 @@
 #  in graphic mode. It only support the 3000 series graphical VFDs for now.
 #
 # 'sdl' uses the Simple DirectMedia Layer to render in a graphical context.
-; method = ncurses
+method = raw
 
 # Visual channels. Can be 'stereo' or 'mono'.
 # 'stereo' mirrors both channels with low frequencies in center.
@@ -106,13 +107,13 @@
 ; raw_target = /dev/stdout
 
 # Raw data format. Can be 'binary' or 'ascii'.
-; data_format = binary
+data_format = ascii
 
 # Binary bit format, can be '8bit' (0-255) or '16bit' (0-65530).
 ; bit_format = 16bit
 
 # Ascii max value. In 'ascii' mode range will run from 0 to value specified here
-; ascii_max_range = 1000
+ascii_max_range = 7
 
 # Ascii delimiters. In ascii format each bar and frame is separated by a delimiters.
 # Use decimal value in ascii table (i.e. 59 = ';' and 10 = '\n' (line feed)).
@@ -124,6 +125,16 @@
 ; sdl_height = 500
 ; sdl_x = -1
 ; sdl_y= -1
+
+# set label on bars on the x-axis. Can be 'frequency' or 'none'. Default: 'none'
+# 'frequency' displays the lower cut off frequency of the bar above.
+# Only supported on ncurses and noncurses output.
+; xaxis = none
+
+# enable alacritty synchronized updates. 1 = on, 0 = off
+# removes flickering in alacritty terminal emeulator.
+# defaults to off since the behaviour in other terminal emulators is unknown
+; alacritty_sync = 1
 
 [color]
 
@@ -195,17 +206,3 @@
 ; 3 = 1 # midtone
 ; 4 = 1
 ; 5 = 1 # treble
-
-
-;[color]
-;
-;gradient = 1
-;
-;gradient_color_1 = '#B5E8E0'
-;gradient_color_2 = '#89DCEB'
-;gradient_color_3 = '#96CDFB'
-;gradient_color_4 = '#DDB6F2'
-;gradient_color_5 = '#F5C2E7'
-;gradient_color_6 = '#E8A2AF'
-;gradient_color_7 = '#F2CDCD'
-;gradient_color_8 = '#F5E0DC'
