@@ -71,6 +71,7 @@
     "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
 		"format": "<span foreground='#7dcfff'></span> {:%d %B %Y - %I:%M %p}",
 		"interval": 60,
+    /* "tooltip": false, */
 		"tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
 	},
 
@@ -169,7 +170,7 @@
     },
      "temperature": {
     // "thermal-zone": 2,
-"hwmon-path": "/sys/class/hwmon/hwmon7/temp2_input",
+"hwmon-path": "/sys/class/hwmon/hwmon6/temp2_input",
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
     "format": " {temperatureC}°C",

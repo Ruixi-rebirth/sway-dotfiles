@@ -11,17 +11,17 @@
 #-----------------------------#
 #           Misc              #
 #-----------------------------#
-    output * adaptive_sync on
-      
-    exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-    exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+output * adaptive_sync on
+  
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
-    default_border pixel 3
-    gaps inner  5
-    gaps outer  0
-    # Activate smart borders (always)
-    smart_borders on
-    #smart_gaps on
+default_border pixel 3
+gaps inner  5
+gaps outer  0
+# Activate smart borders (always)
+smart_borders on
+#smart_gaps on
 
 #------------------------------#
 # Always float certain windows #
@@ -203,6 +203,9 @@
 
     # Start your launcher
     bindsym Super_L exec ~/.config/rofi/launcher.sh
+
+    # Start your powermenu
+    bindsym $mod+Super_L exec ~/.config/rofi/powermenu.sh
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload

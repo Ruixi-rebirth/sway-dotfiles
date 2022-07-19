@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-theme="launcher"
+theme="launcher_theme"
 dir="$HOME/.config/rofi/"
 
 # catppuccin
@@ -30,3 +30,4 @@ cat > $dir/colors.rasi <<- EOF
 EOF
 
 rofi -no-lazy-grab -show drun -modi drun -theme $dir/"$theme"
+

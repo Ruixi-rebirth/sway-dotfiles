@@ -17,7 +17,7 @@
       "cpu",
       "network",
       "battery",
-      "custom/off",
+      "custom/powermenu",
       "tray"
     ],
     "custom/launcher": {
@@ -88,6 +88,7 @@
     "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
 		"interval": 1,
 		"format": "🕗{:%I:%M %p  %A %b %d}",
+    /* "tooltip": false, */
 		"tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
     },
     "memory": {
@@ -133,15 +134,15 @@
     },
    "temperature": {
     // "thermal-zone": 2,
-"hwmon-path": "/sys/class/hwmon/hwmon7/temp2_input",
+"hwmon-path": "/sys/class/hwmon/hwmon6/temp2_input",
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
     "tooltip": false,
     "format": " {temperatureC}°C"
 },
-    "custom/off": {
+    "custom/powermenu": {
         "format": "",
-        "on-click": "xdg-open 'https://www.agemys.cc/'",
+        "on-click": "~/.config/rofi/powermenu.sh",
         "tooltip": false
     },
     "tray": {

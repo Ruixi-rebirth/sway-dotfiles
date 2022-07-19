@@ -1,6 +1,6 @@
 
 configuration {
-    font:			"hack 12";
+    font:			"JetBrains Mono NF 12";
     show-icons:                 true;
     icon-theme:    		       "Papirus";
     display-drun:             		"";
