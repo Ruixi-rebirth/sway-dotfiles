@@ -12,6 +12,17 @@
 #           Misc              #
 #-----------------------------#
 output * adaptive_sync on
+
+#-------------------------------------------#
+# switch between current and last workspace #
+#-------------------------------------------#
+    bindsym $mod+slash workspace back_and_forth
+
+#-------------------------------#
+# Switch to prev/next workspace #
+#-------------------------------#
+bindsym $mod+Shift+n workspace next
+bindsym $mod+Shift+p workspace prev
   
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -199,7 +210,7 @@ smart_borders on
 
 
     # Kill focused window
-    bindsym $mod+Shift+p kill
+    bindsym $mod+Shift+g kill
 
     # Start your launcher
     bindsym Super_L exec ~/.config/rofi/launcher.sh
