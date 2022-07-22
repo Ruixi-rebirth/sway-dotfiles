@@ -16,6 +16,7 @@ output * adaptive_sync on
 #-------------------------------------------#
 # switch between current and last workspace #
 #-------------------------------------------#
+#slash(/)
     bindsym $mod+slash workspace back_and_forth
 
 #-------------------------------#
