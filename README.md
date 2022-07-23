@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/github/issues-pr/Ruixi-rebirth/sway-dotfiles?color=c792ea&labelColor=202328&style=for-the-badge">
   <img src="https://img.shields.io/github/license/Ruixi-rebirth/sway-dotfiles?color=15121C&labelColor=202328&style=for-the-badge">  
 </p>
-<p align="center"><b>My favorite theme is</b></p>
+<p align="center"><b>My favorite theme are</b></p>
 <div style="margin:0 auto;width:120px">
 <table align="center" cellpadding="0" cellspacing="0">
   <tr>
@@ -105,7 +105,7 @@
     $ cd sway-dotfiles && cp -r chrome.nord $HOME/.mozilla/firefox/*.default-release/ 
   ```
 4. **Install GTK theme**
-> I will use the **lxappearance** tool to set gtk themes, mouse styles, icons, etc. Although it will not take effect, it can help me generate **gtk2.0** and **gtk3.0** related configuration files. What really works is **the part of the sway config about setting the gtk theme**,In order to **apply the gtk theme to the qt program**, you should download the **qtstyleplugins** and set the environment variable **QT_QPA_PLATFORMTHEME=gtk2**
+> I use the **lxappearance** tool to set gtk themes, mouse styles, icons, etc. Although it will not take effect, it can help me generate **gtk2.0** and **gtk3.0** related configuration files. What really works is **the part of the sway config about setting the gtk theme**,In order to **apply the gtk theme to the qt program**, you should download the **qtstyleplugins** and set the environment variable **QT_QPA_PLATFORMTHEME=gtk2**
 >> Catppuccin
 
 ```bash
