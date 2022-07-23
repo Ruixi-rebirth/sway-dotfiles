@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/github/issues-pr/Ruixi-rebirth/sway-dotfiles?color=c792ea&labelColor=202328&style=for-the-badge">
   <img src="https://img.shields.io/github/license/Ruixi-rebirth/sway-dotfiles?color=15121C&labelColor=202328&style=for-the-badge">  
 </p>
-<p align="center"><b>My favorite theme are</b></p>
+<p align="center"><b>My favorite themes are</b></p>
 <div style="margin:0 auto;width:120px">
 <table align="center" cellpadding="0" cellspacing="0">
   <tr>
