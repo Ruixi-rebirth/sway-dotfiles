@@ -1,12 +1,12 @@
-<p align="center">
+<h2 align="center">
 <img src="./show/sway-logo.png" width="36px" style="vertical-align:middle;"> <b style="font-size:24px;line-height:24px;vertical-align:middle;"><i>Ruixi-rebirth sway-dotfiles</i></b>
-</p>
+</h2>
 <p align=center style="margin-top:36px">	  
   <img src="https://img.shields.io/github/stars/Ruixi-rebirth/sway-dotfiles?color=dd864a&labelColor=202328&style=for-the-badge">
   <img src="https://img.shields.io/github/forks/Ruixi-rebirth/sway-dotfiles?color=82aaff&labelColor=202328&style=for-the-badge">
   <img src="https://img.shields.io/github/issues/Ruixi-rebirth/sway-dotfiles?color=bf616a&labelColor=202328&style=for-the-badge">
   <img src="https://img.shields.io/github/issues-pr/Ruixi-rebirth/sway-dotfiles?color=c792ea&labelColor=202328&style=for-the-badge">
-  <img src="https://img.shields.io/github/license/Ruixi-rebirth/sway-dotfiles?color=15121C&labelColor=202328&style=for-the-badge">
+  <img src="https://img.shields.io/github/license/Ruixi-rebirth/sway-dotfiles?color=15121C&labelColor=202328&style=for-the-badge">  
 </p>
 <p align="center"><b>My favorite theme is</b></p>
 <div style="margin:0 auto;width:120px">
