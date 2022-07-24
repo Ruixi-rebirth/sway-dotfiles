@@ -30,8 +30,8 @@
 </p>
 
 
-<details style="font-size:1.5em;line-height:1.43">
-<summary><b>🧑🏾‍🎨 ScreenShot <span style="font-size:14px;">(Click to expend) </span> </b> </summary>
+<details>
+<summary style="font-size:1.25em;"><b>🧑🏾‍🎨 ScreenShot</b> <span style="font-size:14px;">(Click to expend) </span> </summary>
 
 ![](./show/show12.png)
 
