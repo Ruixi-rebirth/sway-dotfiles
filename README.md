@@ -93,7 +93,7 @@
 ```bash
  git clone https://github.com/Ruixi-rebirth/sway-dotfiles.git
 ```
-2. **Install the required software**(see [Dependencies](#))
+2. **Install the required software**(see [Dependencies](#-dependencies))
 
 3. **Install firefox theme**
 
