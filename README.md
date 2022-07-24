@@ -73,12 +73,20 @@
 
 ### 🔨 Dependencies
 #### Packages
-  - foo
-  - foo
-  - foo
+  - sway
+  - waybar
+  - rofi
+  - sway-effects
+  - mako
+  - pulseaudio
+  - light
+  - kitty
+  - mpd
+  - mpc
+  - ncmpcpp
+  - nm-applet
 #### Fonts
-  - foo
-  - foo
+  - nerd-fonts noto twemoji noto-cjk
  
 ### 🚀 Manual Installation
 1. **Clone this repository**
