@@ -1,7 +1,10 @@
+
 <p align="center" style="margin-bottom:10px;margin-top:10px;"><a><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"></a></p>
+
 <h2 align="center">
-<img src="./show/sway-logo.png" width="36px" style="vertical-align:middle;"> <b style="font-size:24px;line-height:24px;vertical-align:middle;"><i>Ruixi-rebirth sway-dotfiles</i></b> <img src="./show/gentoo.png" width="16px" style="vertical-align:middle;">
+ <b style="font-size:24px;line-height:24px;vertical-align:middle;"><i>Ruixi-rebirth <img src="./show/sway-logo.png" width="36px" style="vertical-align:middle;"> sway-dotfiles</i></b>
 </h2>
+
 <p align=center style="margin-top:36px">	  
   <img src="https://img.shields.io/github/stars/Ruixi-rebirth/sway-dotfiles?color=dd864a&labelColor=202328&style=for-the-badge">
   <img src="https://img.shields.io/github/forks/Ruixi-rebirth/sway-dotfiles?color=82aaff&labelColor=202328&style=for-the-badge">
@@ -10,21 +13,13 @@
   <img src="https://img.shields.io/github/license/Ruixi-rebirth/sway-dotfiles?color=15121C&labelColor=202328&style=for-the-badge">  
 </p>
 <p align="center"><b>My favorite themes are</b></p>
-<div style="margin:0 auto;width:120px">
-<table align="center" cellpadding="0" cellspacing="0">
-  <tr>
-      <td style="border:none;">
-      <img src="./show/Catppuccin-logo.png" width="34px">
-      </td>
-      <td style="border:none;">
-      <img src="./show/nord-logo.png" width="34px">
-      </td>
-  </tr>
-</table>
-</div>
+<p align="center">
+<img src="./show/Catppuccin-logo.png" width="34px"> <img src="./show/nord-logo.png" width="34px">
+</p>
 <p align="center">
 <img src="./show/macchiato.png" style="margin-top:20px;" width="400px">
 </p>
+
 <p align="center">
 <img src="./show/show.gif" style="margin-top:30px">
 </p>
