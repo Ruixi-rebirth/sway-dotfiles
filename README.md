@@ -76,6 +76,7 @@
 #### Packages
   - sway
   - waybar
+  - swaybg
   - rofi
   - sway-effects
   - mako
