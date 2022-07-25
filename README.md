@@ -1,4 +1,4 @@
-<p align="center" style="margin-bottom:10px"><a><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"></a></p>
+<p align="center" style="margin-bottom:10px;margin-top:10px;"><a><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"></a></p>
 <h2 align="center">
 <img src="./show/sway-logo.png" width="36px" style="vertical-align:middle;"> <b style="font-size:24px;line-height:24px;vertical-align:middle;"><i>Ruixi-rebirth sway-dotfiles</i></b> <img src="./show/gentoo.png" width="16px" style="vertical-align:middle;">
 </h2>
