@@ -138,5 +138,5 @@ These are the basic keybinds. Read through the sway config for more keybinds.
 | `Alt + Shift + e`      | Exit sway                                |
 | `Alt + Shift + c`      | Restart sway                             |
 
-### Star History
+### ⏳ Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=Ruixi-rebirth/sway-dotfiles&type=Date)](https://star-history.com/#Ruixi-rebirth/sway-dotfiles&Date)
