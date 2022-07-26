@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-<img src="./show/show.gif" style="margin-top:30px">
+<img src="./show/show1.gif" style="margin-top:30px">
 </p>
 
 
