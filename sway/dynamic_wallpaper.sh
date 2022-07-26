@@ -6,7 +6,7 @@ elif [ "$isServerExist" = "1" ]; then
   killall swaybg
 fi
 
-swaybg -i $(find ~/Pictures/Animate_Wallpaper/. -type f | shuf -n1) -m fill &
+swaybg -i $(find ~/.config/sway/Background/. -type f | shuf -n1) -m fill &
 OLD_PID=$!
 while true; do
     sleep 1
