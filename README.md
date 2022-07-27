@@ -86,6 +86,7 @@
   - nerd-fonts noto twemoji noto-cjk
  
 ### 🚀 Manual Installation
+*✒️ Just wrote something that I thought was important!*
 1. **Clone this repository**
 ```bash
  git clone https://github.com/Ruixi-rebirth/sway-dotfiles.git
