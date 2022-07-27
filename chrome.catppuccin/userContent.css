@@ -3,8 +3,7 @@
 
 
 * {
-font-family: jetbrains mono nerd font;
-font-size: 12pt;
+font-family: jetbrains mono nerd font; 
 }
 
 @-moz-document url-prefix("about:") {

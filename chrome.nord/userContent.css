@@ -114,7 +114,6 @@ html.private .search-wrapper input {
 
 * {
 font-family: jetbrains mono nerd font;
-font-size: 12pt;
 }
 
 @-moz-document url-prefix("about:") {
