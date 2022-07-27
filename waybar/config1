@@ -1,187 +1,151 @@
 {
-	"layer": "bottom",
-	"position": "top",
-	"height": 28,
-	// "width": 1920, // Comment for dynamic width
-
-	"modules-left": [
-		"sway/workspaces",
-		"custom/separator",
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  //"width": 1920, // Comment for dynamic width
+  "modules-left": [
+    "sway/workspaces",
+    "custom/separator",
     "temperature",
-		"custom/separator",
+    "custom/separator",
     "idle_inhibitor",
-		"custom/separator",
-		"mpd",
+    "mpd",
     "custom/cava-internal",
-	],
-
-	"modules-center": [
-		"clock"
-	],
-
-	"modules-right": [
+  ],
+  "modules-center": [
+    "clock",
+  ],
+  "modules-right": [
     "network",
-		"custom/separator",
+    "custom/separator",
     "pulseaudio",
-		"custom/separator",
+    "custom/separator",
     "backlight",
-		"custom/separator",
-		"cpu",
-		"custom/separator",
-		"memory",
-		"custom/separator",
-		"battery",
-		//"sway/mode",
-		"tray"
-	],
-
-    "custom/launcher": {
-		"format": " ",
-		"on-click": "~/.config/rofi/launcher.sh",
-		"tooltip": false
-    },
-	"custom/separator": {
-		"format": "|",
-		"interval": "once",
-		"tooltip": false
-	},
-
-	"sway/workspaces": {
-		"persistent_workspaces": {
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": [],
-		  "5": [],
-		  "6": [],
-		//"7": [],
-		//"8": [],
-		//"9": []
-		}
-	},
-
-	"sway/window": {
-		"format": " {}",
-		"max-length": 40
-	},
-
-	"clock": {
+    "custom/separator",
+    "cpu",
+    "custom/separator",
+    "memory",
+    "custom/separator",
+    "battery",
+    "tray"
+  ],
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      //"7": [],
+      //"8": [],
+      //"9": []
+    }
+  },
+  "clock": {
     "on-click": "~/.config/waybar/switch_style2.sh &",
     "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
     "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
-		"format": "<span foreground='#7dcfff'></span> {:%d %B %Y - %I:%M %p}",
-		"interval": 60,
-    /* "tooltip": false, */
-		"tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
-	},
-
-   	"mpd": {
-		"max-length": 30,
-		"format": "<span foreground='#bb9af7'></span> {title}",
-		"format-paused": "<span style='italic'>{title}</span>",
-		"format-stopped":"😀 ",
-		"format-disconnected": "",
-		//"on-click-middle": "mpc --quiet toggle",
-		//"on-click-middle": "mpc --quiet stop",
-		"on-click": "mpc --quiet toggle",
-		"on-click-right": "mpc ls | mpc add",
-    "on-click-middle": "kitty ncmpcpp",
-		"on-scroll-up": "mpc --quiet prev",
-		"on-scroll-down": "mpc --quiet next",
-    "smooth-scrolling-threshold":5,
-		"tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
-	},
-
-	"disk": {
-		"interval": 18000,
-		"format": "<span foreground='#9ece6a'>﫭</span> {percentage_used}%",
-		"tooltip-format": "{used} used out of {total} on {path}"
-	},
-
-	"cpu": {
-		"interval": 300,
-		"format": "<span foreground='#e0af68'>﬙</span> {usage}%"
-	},
-
-	"memory": {
-		"interval": 300,
-		"format": "<span foreground='#7aa2f7'></span> {percentage}%",
-		"tooltip-format": "{used:0.2f}GiB used out of {total:0.2f}GiB"
-	},
-
-	"battery": {
-		"interval": 600,
-		"design-capacity": false,
-		"states": {
-			"warning": 15,
-			"critical":10 
-		},
-		"format": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
-		"format-charging": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
-		"format-time": "{H}h {M}m",
-		"format-icons": ["", "", "", "", "", ""]
-	},
-
-	"tray": {
-		"icon-size": 15,
-		"spacing": 5,
-	},
-  "network": {
-    "interface": "wlp0s20f3",
-    "format": " {ifname}",
-    "format-wifi": "{essid} ({signalStrength}%)",
-    "format-ethernet": "{ipaddr}/{cidr}",
-    "format-disconnected": "", //An empty format will hide the module.
+    "format": "<span foreground='#7dcfff'></span> {:%d %B %Y - %I:%M %p}",
+    "interval": 60,
     "tooltip": false,
-   //"tooltip-format": "{ifname} via {gwaddr}",
-   //"tooltip-format-wifi": "{essid} ({signalStrength}%)",
-   //"tooltip-format-ethernet": "{ifname}",
-   //"tooltip-format-disconnected": "Disconnected",
-    "max-length": 30
-},
-"backlight": {
+    "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
+  },
+  "mpd": {
+    "max-length": 30,
+    "format": "<span foreground='#bb9af7'></span> {title}",
+    "format-paused": "<span style='italic'> {title}</span>",
+    "format-stopped":"😀 ",
+    "format-disconnected": "",
+    "on-click": "mpc --quiet toggle",
+    "on-click-right": "mpc ls | mpc add",
+    "on-click-middle": "kitty ncmpcpp",
+    "on-scroll-up": "mpc --quiet prev",
+    "on-scroll-down": "mpc --quiet next",
+    "smooth-scrolling-threshold":5,
+    "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
+  },
+  "disk": {
+    "interval": 18000,
+    "format": "<span foreground='#9ece6a'>﫭</span> {percentage_used}%",
+    "tooltip-format": "{used} used out of {total} on {path}"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "<span foreground='#e0af68'></span> {usage}%"
+  },
+  "memory": {
+    "interval": 300,
+    "format": "<span foreground='#7aa2f7'>﬙</span> {percentage}%",
+    "tooltip-format": "{used:0.2f}GiB used out of {total:0.2f}GiB"
+  },
+  "battery": {
+    "interval": 600,
+    "design-capacity": false,
+    "states": {
+      "warning": 15,
+      "critical":10 
+    },
+    "format": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
+    "format-charging": "<span foreground='#f7768e'>{icon}</span> {capacity}%",
+    "format-time": "{H}h {M}m",
+    "format-icons": ["", "", "", "", "", ""]
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5,
+  },
+  "network": {
+    "interval": 1,
+    "format-wifi": "<span foreground='#61AF1F'>說</span> {essid} ({signalStrength}%)",
+    "format-ethernet": "<span foreground='#61AF1F'></span> {ifname} ({ipaddr})",
+    "format-linked": "<span foreground='#61AF1F'>說</span> {essid} (No IP)",
+    "format-disconnected": "<span foreground='#61AF1F'>說</span> Disconnected",
+    "tooltip": false
+  },
+  "backlight": {
     "device": "intel_backlight",
     "on-scroll-up": "light -A 5",
     "on-scroll-down": "light -U 5",
-    "format": "{icon} {percent}%",
-    "format-icons": ["", ""]
-},
-"pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
+    "format": "<span foreground='#b48ead'>{icon}</span> {percent}%",
+    "format-icons": ["","","",""]
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "<span foreground='#d08770'>{icon}</span> {volume}%", 
     "format-muted": "婢 Muted",
     "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["","墳"]
+      "default": ["", "", ""]
     },
-    "tooltip": false,
+    "states": {
+      "warning": 85,
+    },
     "scroll-step": 1,
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-    },
-    "custom/cava-internal": {
-     //"exec": "~/.config/waybar/cava-internal.sh",
-     "exec": "cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;'",
-		 "tooltip": false
-    },
-     "temperature": {
-    // "thermal-zone": 2,
-"hwmon-path": "/sys/class/hwmon/hwmon6/temp2_input",
-    // "critical-threshold": 80,
-    // "format-critical": "{temperatureC}°C ",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false,
+  },
+  "custom/cava-internal": {
+    "exec": "~/.config/waybar/Cava.sh",
+    //"exec": "cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;'",
+    "tooltip": false
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon6/temp2_input",
     "format": " {temperatureC}°C",
-		 "tooltip": false
-   },
-    "idle_inhibitor": {
-		    "tooltip": false,
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
+    "tooltip": false
+  },
+  "idle_inhibitor": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
 }
