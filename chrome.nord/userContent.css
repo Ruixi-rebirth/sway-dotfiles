@@ -113,7 +113,7 @@ html.private .search-wrapper input {
 /*:root{ scrollbar-width: none !important }*/
 
 * {
-font-family: jetbrains mono nerd font !important;
+font-family: jetbrains mono nerd font;
 font-size: 16px !important;
 }
 
