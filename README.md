@@ -33,7 +33,7 @@
 <details>
 <summary><b>Load More</b> <span style="font-size:14px;">(Click to expend) </span> </summary>
 
-<p align="center"><img src="./show/showfuck.png" width="48px"></p>
+<p align="center"><img src="./show/showfuck.png" width="160px"></p>
 
 ![](./show/show9.png)
 
