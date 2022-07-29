@@ -25,14 +25,19 @@
 </p>
 
 
-<details>
-<summary style="font-size:1.25em;"><b>🧑🏾‍🎨 ScreenShot</b> <span style="font-size:14px;">(Click to expend) </span> </summary>
-
-![](./show/show12.png)
+### 🧑🏾‍🎨 ScreenShot
 
 ![](./show/show5.png)
 
+
+<details>
+<summary><b>Load More</b> <span style="font-size:14px;">(Click to expend) </span> </summary>
+
+<p align="center"><img src="./show/showfuck.png" width="48px"></p>
+
 ![](./show/show9.png)
+
+![](./show/show12.png)
 
 ![](./show/show11.png)
 
