@@ -93,6 +93,9 @@ tooltip label {
 #network {
   color: #ABE9B3;
 }
+#network.disconnected {
+  color: rgb(255, 255, 255);
+}
 #battery.charging, #battery.full, #battery.discharging {
   color: rgb(250, 227, 176);
 }
