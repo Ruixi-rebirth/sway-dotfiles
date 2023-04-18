@@ -1,0 +1,104 @@
+* {
+  font-family: "Hack Nerd Font";
+  font-size: 12pt;
+  border: none;
+  border-radius: 0;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+window#waybar {
+  color: #c0caf5;
+  background-color: #24283b;
+  border-bottom: 1px solid #414868;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+}
+#workspaces button {
+  background: #24283b;
+  color: #c0caf5;
+  border-bottom: 1px solid #414868;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+#workspaces button.focused {
+  color: #c0caf5;
+  background: #414868;
+}
+#workspaces button.urgent {
+  color: #f7768e;
+}
+#workspaces button.persistent {
+  color: #414868;
+}
+#workspaces button:hover {
+  color: #c0caf5;
+  background: #414868;
+  box-shadow: inherit;
+}
+#clock,
+#mpd,
+#idle_inhibitor,
+#custom-cava-internal,
+#disk,
+#backlight,
+#temperature,
+#bluetooth,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#battery,
+#mode {
+  margin: 0px 2px;   /* gaps between modules */
+  padding: 0.2rem 0.6rem;
+  color: #c0caf5;
+  background: #24283b;
+  border-bottom: 1px solid #414868;
+}
+#mode,
+#tray {
+  margin: 0 0 0 2px;
+}
+/* #mode { */
+/*   color: #24283b; */
+/*   background-color: #f7768e; */
+/* } */
+@keyframes blink {
+  to {
+    color: #c0caf5;
+    background-color: #24283b;
+  }
+}
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #f7768e;
+  background-color: #24283b;
+}
+#battery.charging {
+  color: #9ece6a;
+  background-color: #24283b;
+}
+#mpd.paused {
+  color: #414868;
+  background-color: #24283b;
+}
+#mpd.stopped {
+  background: transparent;
+}
+#custom-separator {
+  color: #414868;
+  background: #24283b;
+  border-bottom: 1px solid #414868;
+}
+#idle_inhibitor {
+  color:#B5E8E0;
+}
+#custom-cava-internal{
+  font-family: "Hack Nerd Font" ;
+}
